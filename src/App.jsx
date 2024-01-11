@@ -1,5 +1,5 @@
 import { Header } from './components/header/header'
-import { Post } from './post'
+import { Post } from './components/post/post'
 import './global.css'
 import styles from './AppStyles.module.css'
 import { Sidebar } from './components/sidebar/sidebar'
@@ -15,10 +15,6 @@ export function App() {
           <Post 
           author="Hítalo Rodrigues" 
           content="Legal Text"
-          />
-          <Post 
-          author="D Rodrigues" 
-          content="Show d"
           />
         </main>
       </div>
