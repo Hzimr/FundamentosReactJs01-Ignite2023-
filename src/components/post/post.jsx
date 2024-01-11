@@ -1,6 +1,6 @@
 import styles from './postStyles.module.css'
 
-export function Post(props) {
+export function Post() {
   return (
     <article className={styles.post}>
       <header>
@@ -29,6 +29,15 @@ export function Post(props) {
           <a href="">#rocketseat</a>
         </p>
       </div>
+      <form className={styles.commentForm}>
+        Deixe seu feedback
+        <textarea
+          placeholder="Deixe um comentário"
+        />
+        <footer>
+          <button type="submit">Publicar</button>
+        </footer>
+      </form>
     </article>
   )
 }
