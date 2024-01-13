@@ -21,6 +21,7 @@ export function Post({ author, publishedAt, content }) {
   })
 
   function handleCreateNewComment() {
+    //Imperativo
     event.preventDefault()
 
     const newCommentText = event.target.comment.value
