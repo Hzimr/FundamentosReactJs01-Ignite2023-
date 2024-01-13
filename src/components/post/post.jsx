@@ -2,7 +2,7 @@ import styles from './postStyles.module.css'
 import { Comment } from '../comment/comment'
 import { Avatar } from '../avatar/avatar'
 
-export function Post() {
+export function Post(props) {
   return (
     <article className={styles.post}>
       <header>
