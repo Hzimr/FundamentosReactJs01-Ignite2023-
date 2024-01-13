@@ -1,21 +1,30 @@
-import styles from './postStyles.module.css'
 import { Comment } from '../comment/comment'
 import { Avatar } from '../avatar/avatar'
 
-export function Post(props) {
+import styles from './postStyles.module.css'
+
+export function Post({ author, publishedAt }) {
+  const publishedDateFormatted = new Intl.DateTimeFormat('pt-BR', {
+    day: '2-digit',
+    month: 'long',
+    hour: '2-digit',
+    minute: '2-digit',
+  }).format(publishedAt);
+
   return (
     <article className={styles.post}>
       <header>
         <div className={styles.author}>
           <Avatar
-            src="https:/github.com/diego3g.png" 
+            src={author.avatarUrl}
           />
           <div className={styles.authorInfo}>
-            <strong>Diego Fernandes</strong>
+            <strong>{author.name}</strong>
             <span>Web Developer</span>
           </div>
         </div>
-        <time title="11 de Janeiro de 2024 " dateTime='11/01/2024 12:00:00'>Publicado há 1h</time>
+        <time title="11 de Janeiro de 2024 " dateTime='11/01/2024 12:00:00'>       {publishedDateFormatted}
+        </time>
       </header>
       <div className={styles.content}>
         <p>Fala galeraa 👋 </p><br/>
