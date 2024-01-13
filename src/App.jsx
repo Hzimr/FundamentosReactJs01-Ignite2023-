@@ -17,7 +17,6 @@ const posts = [
       role: 'Desenvolvedor',
     },
     content: [
-      { id: 1} ,
       { type: 'paragraph', content: 'Fala galeraa 👋'},
       { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
       { type: 'link', content: 'jane.design/doctorcare'},
@@ -32,7 +31,6 @@ const posts = [
       role: 'CTO Rocketseat',
     },
     content: [
-      { id: 2},
       { type: 'paragraph', content: 'Fala galeraa 👋'},
       { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
       { type: 'link', content: 'jane.design/doctorcare'},
@@ -57,7 +55,6 @@ export function App() {
                 content={post.content}
                 publishedAt={post.publishedAt} />)
           })}
-          {/* <Post /> */}
         </main>
       </div>
     </div>
