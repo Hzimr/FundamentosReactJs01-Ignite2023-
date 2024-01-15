@@ -1,14 +1,15 @@
 import { Header } from './components/header/header'
-import { Post } from './components/post/post'
+import { Post, PostType } from './components/post/post'
 import './global.css'
 import styles from './AppStyles.module.css'
 import { Sidebar } from './components/sidebar/sidebar'
-
 // author: { avatar_url: "", name: "", role: ""}
 // publishedAt: Date
 // content: string
 
-const posts = [
+
+
+const posts: PostType[] = [
   {
     id: 1,
     author: {
@@ -51,9 +52,8 @@ export function App() {
             return (
               <Post 
                 key={post.id} 
-                author={post.author}
-                content={post.content}
-                publishedAt={post.publishedAt} />)
+                post={post}
+              />)
           })}
         </main>
       </div>

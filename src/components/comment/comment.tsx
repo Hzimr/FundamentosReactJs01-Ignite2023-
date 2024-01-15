@@ -25,7 +25,9 @@ export function Comment({ content, onDeleteComment }: CommentProps) {
       <Avatar 
         hasBorder={false} 
         src="https://github.com/maykbrito.png" 
-        alt="n tem"/>
+        alt="n tem"
+        title="n tem"
+      />
       <div className={styles.commentBox}>
         <div className={styles.commentContent}>
           <header>
